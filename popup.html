@@ -4,11 +4,25 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
+    <button id="reload">Reload</button>
+
     <!-- Title Section-->
     <h1 id="page-title">Gemcoin</h1>
     <h2 id="page-description">Access your gemnode from the internet.</h2>
 
+    <p id="warning">You must first add your keys to the Gemcoin extension. To do this, right click on the app and select Options.</p>
+
     <!-- Main -->
+    <div id="mainArea" style="display:none;">
+      <h3>Send a transaction</h3>
+
+    </div>
+
+    <hr />
+    <p>Your keys:</p>
+    <p id="privateKeyHere"></p>
+    <p id="publicKeyHere"></p>
+
     <button id="changeColor"></button>
     <script src="popup.js"></script>
   </body>
