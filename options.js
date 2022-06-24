@@ -26,19 +26,16 @@ function saveKeys() {
 function removeKeys() {
    // cancel form submit
    event.preventDefault();
-
-   chrome.storage.local.remove(["privKey","pubKey"], function() {
-      var error = chrome.runtime.lastError;
-      if (error) { console.error(error); }
-      console.log("Removed keys.")
-   });
+   chrome.storage.local.remove(["privKey","pubKey"], console.log("Removed keys."));
 }
 
+// listen for user clicks on saveKeys or removeKeys
 window.addEventListener('load', function(evt) {
    document.getElementById('keys').addEventListener('submit', saveKeys);
    document.getElementById('removeKeyList').addEventListener('submit', removeKeys);
 });
 
+/*
 function logStorage() {
     if(chrome.storage) {
         chrome.storage.local.get(function(data){
@@ -60,6 +57,4 @@ function logStorage() {
     } else {
         console.warn("chrome.storage is not accessible, check permissions");
     }
-}
-
-logStorage();
+} */

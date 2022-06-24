@@ -5,17 +5,31 @@
   </head>
   <body>
     <button id="reload">Reload</button>
-
     <!-- Title Section-->
     <h1 id="page-title">Gemcoin</h1>
     <h2 id="page-description">Access your gemnode from the internet.</h2>
-
     <p id="warning">You must first add your keys to the Gemcoin extension. To do this, right click on the app and select Options.</p>
-
     <!-- Main -->
     <div id="mainArea" style="display:none;">
       <h3>Send a transaction</h3>
-
+      <form id="transactionForm">
+         <p id="format">
+         <label for="txType">Transaction type:</label>
+         <input type="text" id="txType" name="txType"><br /><br />
+         </p>
+         <p id="format">
+         <label for="value">Value:</label>
+         <input type="text" id="value" name="value"><br /><br />
+         </p>
+         <p id="format">
+         <label for="data">Data (raw bytecode):</label>
+         <input type="text" id="data" name="data"><br /><br />
+         </p>
+         <p id="format">
+         <label for="maxElectricity">Max electricity fee:</label>
+         <input type="text" id="maxElectricity" name="maxElectricity">
+         </p>
+      </form>
     </div>
 
     <hr />
@@ -23,7 +37,6 @@
     <p id="privateKeyHere"></p>
     <p id="publicKeyHere"></p>
 
-    <button id="changeColor"></button>
     <script src="popup.js"></script>
   </body>
 </html>

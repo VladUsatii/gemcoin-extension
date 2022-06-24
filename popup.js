@@ -19,30 +19,6 @@ function alertUserToSetKeys() {
    warning.style.display = "block";
 }
 
-// Init button with user's preferred color
-let changeColor = document.getElementById("changeColor");
-
-chrome.storage.sync.get("color", ({ color }) => {
-   changeColor.style.backgroundColor = color;
-});
-
-/*  // when button clicked, inject setPageBackgroundColor into page
-changeColor.addEventListener("click", async () => {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: setPageBackgroundColor,
-  });
-});
-
-// bgColor content script
-function setPageBackgroundColor() {
-  chrome.storage.sync.get("color", ({ color }) => {
-    document.body.style.backgroundColor = color;
-  });
-} */
-
 let privKey = document.getElementById("privateKeyHere");
 let pubKey = document.getElementById("publicKeyHere");
 
